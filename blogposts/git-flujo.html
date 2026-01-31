@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIT Y FLUJO DE TRABAJO</title>
+    <link rel="stylesheet" href="../terminal.css">
+</head>
+<body>
+
+    <header>
+        <h1>LOG: GIT Y FLUJO DE TRABAJO</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="../index.html">[ INICIO ]</a></li>
+            <li><a href="../about.html">[ PERFIL ]</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>> GIT Y FLUJO DE TRABAJO</h2>
+            <span class="meta">FECHA: 2026-01-20 | CATEGORÍA: SOFTWARE</span>
+
+            <p>
+                GIT ES EL SISTEMA DE CONTROL DE VERSIONES DISTRIBUIDO MÁS USADO. DOMINARLO IMPLICA
+                ENTENDER RAMAS, FUSIONES Y UN FLUJO DE TRABAJO REPRODUCIBLE.
+            </p>
+
+            <h3>> RAMAS Y COMMITS ATÓMICOS</h3>
+                <p>
+                    CADA COMMIT DEBE REPRESENTAR UN CAMBIO LÓGICO ÚNICO. RAMAS CORTASTAS: FEATURE, FIX, REFACTOR.
+                    MAIN O MASTER COMO REFERENCIA ESTABLE; TRABAJO DIARIO EN RAMAS SECUNDARIAS.
+                </p>
+
+            <h3>> FLUJO RECOMENDADO</h3>
+            <p>
+                CREAR RAMA DESDE MAIN → HACER COMMITS PEQUEÑOS Y DESCRIPTIVOS → PUSH → PULL REQUEST O MERGE.
+                NUNCA HACER COMMIT DIRECTAMENTE A MAIN EN PROYECTOS COMPARTIDOS SIN REVISIÓN.
+            </p>
+
+            <h3>> COMANDOS ESENCIALES</h3>
+            <pre style="border: 1px dashed #cc8c00; padding: 15px; overflow-x: auto;"><code>git checkout -b feature/nueva-funcion
+git add .
+git commit -m "feat: descripción clara del cambio"
+git push origin feature/nueva-funcion</code></pre>
+
+            <p>
+                CONVENCIONES COMO CONVENTIONAL COMMITS (FEAT, FIX, DOCS) MEJORAN EL HISTORIAL Y LA AUTOMATIZACIÓN.
+            </p>
+        </article>
+    </main>
+
+    <footer>
+        <p><a href="../index.html">> VOLVER AL ROOT</a></p>
+    </footer>
+
+    <script src="../terminal.js"></script>
+</body>
+</html>
