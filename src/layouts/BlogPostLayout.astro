@@ -1,0 +1,32 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+    title: string;
+    date: Date;
+    category: string;
+}
+
+const { title, date, category } = Astro.props;
+const formattedDate = date.toISOString().split('T')[0];
+---
+
+<BaseLayout title={title}>
+    <header>
+        <h1>LOG: {title}</h1>
+    </header>
+
+    <Nav />
+
+    <main>
+        <article>
+            <h2>&gt; {title}</h2>
+            <span class="meta">FECHA: {formattedDate} | CATEGORÍA: {category}</span>
+            <slot />
+        </article>
+    </main>
+
+    <Footer backLink="/" backText="> VOLVER AL ROOT" />
+</BaseLayout>

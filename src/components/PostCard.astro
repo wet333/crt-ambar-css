@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string;
+    date: Date;
+    category: string;
+    description: string;
+    slug: string;
+    isLatest?: boolean;
+}
+
+const { title, date, category, description, slug, isLatest = false } = Astro.props;
+const formattedDate = date.toISOString().split('T')[0];
+---
+
+<article class:list={[{ 'post-latest': isLatest }]}>
+    <h2>{isLatest ? '' : '> '}{title}</h2>
+    <span class="meta">FECHA: {formattedDate} | CATEGORÍA: {category}</span>
+    <p>{description}</p>
+    <a href={`/blog/${slug}`}>&gt; LEER ARCHIVO COMPLETO</a>
+</article>

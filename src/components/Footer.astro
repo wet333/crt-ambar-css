@@ -1,0 +1,16 @@
+---
+interface Props {
+    backLink?: string;
+    backText?: string;
+}
+
+const { backLink, backText } = Astro.props;
+---
+
+<footer>
+    {backLink && backText ? (
+        <p><a href={backLink}>{backText}</a></p>
+    ) : (
+        <p>Made by <a href="https://github.com/wet333">_wet333</a></p>
+    )}
+</footer>

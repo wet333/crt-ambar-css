@@ -1,0 +1,26 @@
+{
+  "name": "crt-ambar-css",
+  "version": "1.0.0",
+  "description": "Demo de un **CSS classless** con estética retro de terminal CRT en tonos ámbar. El estilo se aplica solo con etiquetas HTML semánticas (`header`, `nav`, `main`, `article`, `aside`, etc.) sin necesidad de clases. Incluye efectos visuales tipo CRT: scanlines, flicker y ruido, aplicados vía JavaScript.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wet333/crt-ambar-css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/wet333/crt-ambar-css/issues"
+  },
+  "homepage": "https://github.com/wet333/crt-ambar-css#readme",
+  "dependencies": {
+    "@astrojs/markdown-remark": "^6.3.10",
+    "astro": "^5.17.1"
+  }
+}
