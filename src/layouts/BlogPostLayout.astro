@@ -13,20 +13,16 @@ const { title, date, category } = Astro.props;
 const formattedDate = date.toISOString().split('T')[0];
 ---
 
-<BaseLayout title={title}>
-    <header class="mb-8">
-        <h1>LOG: {title}</h1>
-    </header>
-
+<BaseLayout>
     <Nav />
 
     <main class="flex flex-wrap gap-5">
         <article class="border-terminal p-5 grow-3 shrink basis-[600px]">
             <h2>{title}</h2>
-            <span class="opacity-70 text-sm mb-4 block">FECHA: {formattedDate} | CATEGORÍA: {category}</span>
+            <span class="opacity-70 text-sm mb-4 block">Fecha: {formattedDate} | Categoría: {category}</span>
             <slot />
         </article>
     </main>
 
-    <Footer backLink="/" backText="VOLVER AL ROOT" />
+    <Footer backLink="/" backText="Volver al root" />
 </BaseLayout>

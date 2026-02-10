@@ -1,26 +1,26 @@
 ---
 title: "APIs REST"
 date: 2026-01-25
-category: "SOFTWARE"
-description: "REST DEFINE CÓMO EXPONER RECURSOS POR HTTP. URLS COMO RECURSOS, VERBOS HTTP COMO ACCIONES."
+category: "Software"
+description: "REST define cómo exponer recursos por HTTP. URLs como recursos, verbos HTTP como acciones."
 ---
 
-REST (REPRESENTATIONAL STATE TRANSFER) DEFINE CÓMO EXPONER RECURSOS POR HTTP.
-URLS REPRESENTAN RECURSOS; LOS VERBOS HTTP (GET, POST, PUT, PATCH, DELETE) DEFINEN LA ACCIÓN.
+REST (Representational State Transfer) define cómo exponer recursos por HTTP.
+URLs representan recursos; los verbos HTTP (GET, POST, PUT, PATCH, DELETE) definen la acción.
 
-### > PRINCIPIOS BÁSICOS
+### > Principios básicos
 
-RECURSOS CON IDENTIFICADORES ÚNICOS (URIs). ESTADO SIN ALMACENAR EN SERVIDOR: CADA PETICIÓN
-LLEVA LA INFORMACIÓN NECESARIA. RESPUESTAS CACHEABLES Y INTERFAZ UNIFORME.
+Recursos con identificadores únicos (URIs). Estado sin almacenar en servidor: cada petición
+lleva la información necesaria. Respuestas cacheables y interfaz uniforme.
 
-### > CÓDIGOS DE ESTADO
+### > Códigos de estado
 
-200 OK, 201 CREATED, 204 NO CONTENT, 400 BAD REQUEST, 401 UNAUTHORIZED, 404 NOT FOUND, 500 SERVER ERROR.
-USAR LOS CÓDIGOS CORRECTOS AYUDA A CLIENTES Y HERRAMIENTAS A REACCIONAR BIEN.
+200 OK, 201 Created, 204 No Content, 400 Bad Request, 401 Unauthorized, 404 Not Found, 500 Server Error.
+Usar los códigos correctos ayuda a clientes y herramientas a reaccionar bien.
 
-### > BUENAS PRÁCTICAS
+### > Buenas prácticas
 
-NO USAR VERBOS EN LA URL: /USUARIOS EN LUGAR DE /OBTENER-USUARIOS. USAR PLURAL PARA RECURSOS.
-VERSIONAR LA API (EJ. /API/V1/RECURSO) PARA EVOLUCIONAR SIN ROMPER CLIENTES.
+No usar verbos en la URL: /usuarios en lugar de /obtener-usuarios. Usar plural para recursos.
+Versionar la API (ej. /api/v1/recurso) para evolucionar sin romper clientes.
 
-JSON COMO FORMATO ESTÁNDAR; DOCUMENTAR CON OPENAPI (SWAGGER) PARA CONSUMIDORES Y EQUIPOS.
+JSON como formato estándar; documentar con OpenAPI (Swagger) para consumidores y equipos.

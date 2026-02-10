@@ -6,7 +6,7 @@ const currentPath = Astro.url.pathname;
 
 <nav class="border-terminal mb-8 p-2">
     <ul class="flex justify-around list-none p-0 m-0">
-        <li class="m-0"><Link href="/" class:list={["block py-2 px-4", { active: currentPath === '/' }]}>[ INICIO ]</Link></li>
-        <li class="m-0"><Link href="/about" class:list={["block py-2 px-4", { active: currentPath === '/about/' || currentPath === '/about' }]}>[ PERFIL ]</Link></li>
+        <li class="m-0"><Link href="/" command="cd ~" class:list={["block py-2 px-4", { active: currentPath === '/' }]}>[ Inicio ]</Link></li>
+        <li class="m-0"><Link href="/about" command="cd ~/about" class:list={["block py-2 px-4", { active: currentPath === '/about/' || currentPath === '/about' }]}>[ Perfil ]</Link></li>
     </ul>
 </nav>

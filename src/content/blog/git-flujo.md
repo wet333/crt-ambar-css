@@ -1,24 +1,24 @@
 ---
-title: "GIT Y FLUJO DE TRABAJO"
+title: "Git y flujo de trabajo"
 date: 2026-01-20
-category: "SOFTWARE"
-description: "RAMAS, COMMITS ATÓMICOS Y UN FLUJO REPRODUCIBLE. CONVENTIONAL COMMITS Y BUENAS PRÁCTICAS."
+category: "Software"
+description: "Ramas, commits atómicos y un flujo reproducible. Conventional commits y buenas prácticas."
 ---
 
-GIT ES EL SISTEMA DE CONTROL DE VERSIONES DISTRIBUIDO MÁS USADO. DOMINARLO IMPLICA
-ENTENDER RAMAS, FUSIONES Y UN FLUJO DE TRABAJO REPRODUCIBLE.
+Git es el sistema de control de versiones distribuido más usado. Dominarlo implica
+entender ramas, fusiones y un flujo de trabajo reproducible.
 
-### > RAMAS Y COMMITS ATÓMICOS
+### > Ramas y commits atómicos
 
-CADA COMMIT DEBE REPRESENTAR UN CAMBIO LÓGICO ÚNICO. RAMAS CORTASTAS: FEATURE, FIX, REFACTOR.
-MAIN O MASTER COMO REFERENCIA ESTABLE; TRABAJO DIARIO EN RAMAS SECUNDARIAS.
+Cada commit debe representar un cambio lógico único. Ramas cortas: feature, fix, refactor.
+Main o master como referencia estable; trabajo diario en ramas secundarias.
 
-### > FLUJO RECOMENDADO
+### > Flujo recomendado
 
-CREAR RAMA DESDE MAIN → HACER COMMITS PEQUEÑOS Y DESCRIPTIVOS → PUSH → PULL REQUEST O MERGE.
-NUNCA HACER COMMIT DIRECTAMENTE A MAIN EN PROYECTOS COMPARTIDOS SIN REVISIÓN.
+Crear rama desde main → hacer commits pequeños y descriptivos → push → pull request o merge.
+Nunca hacer commit directamente a main en proyectos compartidos sin revisión.
 
-### > COMANDOS ESENCIALES
+### > Comandos esenciales
 
 ```bash
 git checkout -b feature/nueva-funcion
@@ -27,4 +27,4 @@ git commit -m "feat: descripción clara del cambio"
 git push origin feature/nueva-funcion
 ```
 
-CONVENCIONES COMO CONVENTIONAL COMMITS (FEAT, FIX, DOCS) MEJORAN EL HISTORIAL Y LA AUTOMATIZACIÓN.
+Convenciones como conventional commits (feat, fix, docs) mejoran el historial y la automatización.

@@ -4,12 +4,13 @@ import type { HTMLAttributes } from 'astro/types';
 interface Props extends HTMLAttributes<'a'> {
     href: string;
     target?: '_blank' | '_self' | '_parent' | '_top';
+    command?: string;
 }
 
-const { href, target = '_self', class: className, ...rest } = Astro.props;
+const { href, target = '_self', class: className, command, ...rest } = Astro.props;
 ---
 
-<a href={href} target={target} class:list={["negative-color group inline-flex items-baseline my-1 py-0 px-2 gap-1", className]} {...rest}>
+<a href={href} target={target} class:list={["negative-color group inline-flex items-baseline my-1 py-0 px-2 gap-0 hover:gap-1", className]} data-ps-command={command} {...rest}>
     <span 
         class="font-bold inline-block max-w-0 opacity-0 overflow-hidden group-hover:max-w-[1ch] group-hover:opacity-100 transition-[max-width,opacity] duration-300 ease-out"
     >
@@ -19,3 +20,14 @@ const { href, target = '_self', class: className, ...rest } = Astro.props;
         <slot />
     </span>
 </a>
+
+<script>
+    import { addPS } from '../scripts/ps-history';
+
+    document.querySelectorAll<HTMLAnchorElement>('a[data-ps-command]').forEach(link => {
+        link.addEventListener('click', () => {
+            const cmd = link.dataset.psCommand;
+            if (cmd) addPS(cmd);
+        });
+    });
+</script>

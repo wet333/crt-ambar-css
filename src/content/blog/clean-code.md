@@ -1,28 +1,28 @@
 ---
-title: "CLEAN CODE"
+title: "Clean code"
 date: 2026-01-28
-category: "SOFTWARE"
-description: "CÓDIGO LIMPIO ES LEGIBLE, PREDECIBLE Y FÁCIL DE MODIFICAR. NOMBRES CLAROS, FUNCIONES PEQUEÑAS Y COMENTARIOS ÚTILES."
+category: "Software"
+description: "Código limpio es legible, predecible y fácil de modificar. Nombres claros, funciones pequeñas y comentarios útiles."
 ---
 
-CÓDIGO LIMPIO ES LEGIBLE, PREDECIBLE Y FÁCIL DE MODIFICAR. NO ES SOLO ESTILO:
-ES ESTRUCTURA, NOMBRES CLAROS Y RESPETO POR QUIEN MANTENDRÁ EL CÓDIGO.
+Código limpio es legible, predecible y fácil de modificar. No es solo estilo:
+es estructura, nombres claros y respeto por quien mantendrá el código.
 
-### > NOMBRES QUE SIGNIFIQUEN ALGO
+### > Nombres que signifiquen algo
 
-VARIABLES Y FUNCIONES DEBEN DECIR QUÉ HACEN O QUÉ CONTIENEN. EVITAR ABREVIATURAS
-OSCURAS; PREFERIR NOMBRES LARGOS Y CLAROS A CÓDIGO CRÍPTICO.
+Variables y funciones deben decir qué hacen o qué contienen. Evitar abreviaturas
+oscuras; preferir nombres largos y claros a código críptico.
 
-### > FUNCIONES PEQUEÑAS
+### > Funciones pequeñas
 
-UNA FUNCIÓN, UNA RESPONSABILIDAD. SI PUEDES EXTRAER UN BLOQUE CON UN NOMBRE DESCRIPTIVO,
-HAZLO. REDUCE COMPLEJIDAD CÍCLOMÁTICA Y FACILITA PRUEBAS.
+Una función, una responsabilidad. Si puedes extraer un bloque con un nombre descriptivo,
+hazlo. Reduce complejidad ciclomática y facilita pruebas.
 
-### > COMENTARIOS ÚTILES
+### > Comentarios útiles
 
-EL MEJOR COMENTARIO ES CÓDIGO QUE NO NECESITA EXPLICACIÓN. COMENTAR EL "POR QUÉ" CUANDO
-EL "QUÉ" NO SEA OBVIO; EVITAR COMENTARIOS REDUNDANTES O DESACTUALIZADOS.
+El mejor comentario es código que no necesita explicación. Comentar el "por qué" cuando
+el "qué" no sea obvio; evitar comentarios redundantes o desactualizados.
 
-> "EL CÓDIGO SE LEE MUCHAS MÁS VECES DE LAS QUE SE ESCRIBE."
+> "El código se lee muchas más veces de las que se escribe."
 
-REFACTORIZAR DE FORMA CONTINUA: DEJAR EL CÓDIGO MEJOR DEL QUE LO ENCONTRASTE.
+Refactorizar de forma continua: dejar el código mejor del que lo encontraste.

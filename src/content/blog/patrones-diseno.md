@@ -1,26 +1,26 @@
 ---
-title: "PATRONES DE DISEÑO"
+title: "Patrones de diseño"
 date: 2026-01-15
-category: "SOFTWARE"
-description: "SOLUCIONES REUTILIZABLES A PROBLEMAS COMUNES: CREACIONALES, ESTRUCTURALES Y CONDUCTUALES."
+category: "Software"
+description: "Soluciones reutilizables a problemas comunes: creacionales, estructurales y conductuales."
 ---
 
-LOS PATRONES DE DISEÑO SON SOLUCIONES REUTILIZABLES A PROBLEMAS COMUNES EN EL DISEÑO DE SOFTWARE.
-NO SON CÓDIGO COPIABLE, SINO PLANTILLAS MENTALES PARA ESTRUCTURAR SISTEMAS.
+Los patrones de diseño son soluciones reutilizables a problemas comunes en el diseño de software.
+No son código copiable, sino plantillas mentales para estructurar sistemas.
 
-### > PATRONES CREACIONALES
+### > Patrones creacionales
 
-SINGLETON, FACTORY, BUILDER: CONTROLAN CÓMO SE CREAN LOS OBJETOS Y REDUCEN EL ACOPLAMIENTO.
-ÚTILES CUANDO LA CREACIÓN DE INSTANCIAS ES COMPLEJA O DEBE SER CENTRALIZADA.
+Singleton, Factory, Builder: controlan cómo se crean los objetos y reducen el acoplamiento.
+Útiles cuando la creación de instancias es compleja o debe ser centralizada.
 
-### > PATRONES ESTRUCTURALES
+### > Patrones estructurales
 
-ADAPTER, DECORATOR, FACADE: COMPONEN OBJETOS Y CLASES PARA FORMAR ESTRUCTURAS MÁS GRANDES
-SIN COMPROMETER LA FLEXIBILIDAD. FACADE SIMPLIFICA INTERFACES COMPLEJAS.
+Adapter, Decorator, Facade: componen objetos y clases para formar estructuras más grandes
+sin comprometer la flexibilidad. Facade simplifica interfaces complejas.
 
-### > PATRONES CONDUCTUALES
+### > Patrones conductuales
 
-OBSERVER, STRATEGY, COMMAND: GESTIONAN COMUNICACIÓN Y RESPONSABILIDADES ENTRE OBJETOS.
-OBSERVER ES LA BASE DE MUCHOS SISTEMAS DE EVENTOS EN FRONTEND.
+Observer, Strategy, Command: gestionan comunicación y responsabilidades entre objetos.
+Observer es la base de muchos sistemas de eventos en frontend.
 
-USAR PATRONES CON CRITERIO: NO FORZAR UN PATRÓN DONDE UN CÓDIGO SIMPLE BASTA.
+Usar patrones con criterio: no forzar un patrón donde un código simple basta.

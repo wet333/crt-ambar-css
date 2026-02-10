@@ -1,19 +1,19 @@
 ---
-title: "HTML SEMÁNTICO"
+title: "HTML semántico"
 date: 2026-01-31
-category: "SOFTWARE"
-description: "HTML SEMÁNTICO USA ETIQUETAS SEGÚN EL SIGNIFICADO DEL CONTENIDO. HEADER, NAV, MAIN, ARTICLE, SECTION, ASIDE Y FOOTER DESCRIBEN ESTRUCTURA Y ROL. COMBINADO CON CSS CLASSLESS, PERMITE SITIOS COMPLETOS SIN CLASES."
+category: "Software"
+description: "HTML semántico usa etiquetas según el significado del contenido. header, nav, main, article, section, aside y footer describen estructura y rol. Combinado con CSS classless, permite sitios completos sin clases."
 ---
 
-HTML SEMÁNTICO USA ETIQUETAS SEGÚN EL SIGNIFICADO DEL CONTENIDO, NO SOLO SU APARIENCIA.
-HEADER, NAV, MAIN, ARTICLE, SECTION, ASIDE Y FOOTER DESCRIBEN ESTRUCTURA Y ROL.
+HTML semántico usa etiquetas según el significado del contenido, no solo su apariencia.
+header, nav, main, article, section, aside y footer describen estructura y rol.
 
-### > BENEFICIOS
+### > Beneficios
 
-ACCESIBILIDAD: LECTORES DE PANTALLA Y HERRAMIENTAS ENTIENDEN MEJOR LA PÁGINA. SEO: LOS
-MOTORES INTERPRETAN MEJOR EL CONTENIDO. MANTENIMIENTO: EL CÓDIGO SE LEE COMO UN DOCUMENTO.
+Accesibilidad: lectores de pantalla y herramientas entienden mejor la página. SEO: los
+motores interpretan mejor el contenido. Mantenimiento: el código se lee como un documento.
 
-### > ESTRUCTURA TÍPICA
+### > Estructura típica
 
 ```
 <header>...</header>
@@ -25,9 +25,9 @@ MOTORES INTERPRETAN MEJOR EL CONTENIDO. MANTENIMIENTO: EL CÓDIGO SE LEE COMO UN
 <footer>...</footer>
 ```
 
-### > CLASSLESS CSS
+### > Classless CSS
 
-COMBINAR HTML SEMÁNTICO CON CSS QUE SELECCIONA POR ETIQUETAS PERMITE SITIOS COMPLETOS
-SIN CLASES: UN SOLO ESTILO GLOBAL Y DOCUMENTOS LIMPIOS. ESTE BLOG ES UN EJEMPLO.
+Combinar HTML semántico con CSS que selecciona por etiquetas permite sitios completos
+sin clases: un solo estilo global y documentos limpios. Este blog es un ejemplo.
 
-MENOS MARCAJE, MÁS SIGNIFICADO. IDEAL PARA BLOGS, DOCUMENTACIÓN Y PÁGINAS CONTENIDO-CENTRIC.
+Menos marcaje, más significado. Ideal para blogs, documentación y páginas contenido-centric.
