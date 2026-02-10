@@ -221,21 +221,28 @@ function initCRT(): void {
     //   - brightness(X)   → amplitud de la luz (mas = mas brillante)
     //   - opacity          → intensidad global (0.0 a 1.0)
     // ================================================================
-    const bloom = document.createElement('div');
-    bloom.style.cssText = [
-        'position:fixed',
-        'inset:0',
-        'width:100%',
-        'height:100%',
-        'pointer-events:none',
-        'z-index:9998',
-        'backdrop-filter:blur(8px) brightness(2.5)',
-        '-webkit-backdrop-filter:blur(8px) brightness(2.5)',
-        'mix-blend-mode:screen',
-        'opacity:0.2',
-    ].join(';');
+    const bloomLayers = [
+        { blur: 0.5,  brightness: 1.25, opacity: 1 },
+        { blur: 4, brightness: 1.75, opacity: 0.25 },
+        { blur: 24, brightness: 1.25, opacity: 0.3 },
+    ];
 
-    document.body.appendChild(bloom);
+    bloomLayers.forEach(({ blur, brightness, opacity }) => {
+        const layer = document.createElement('div');
+        layer.style.cssText = [
+            'position:fixed',
+            'inset:0',
+            'width:100%',
+            'height:100%',
+            'pointer-events:none',
+            'z-index:9998',
+            `backdrop-filter:blur(${blur}px) brightness(${brightness})`,
+            `-webkit-backdrop-filter:blur(${blur}px) brightness(${brightness})`,
+            'mix-blend-mode:screen',
+            `opacity:${opacity}`,
+        ].join(';');
+        document.body.appendChild(layer);
+    });
 
     const canvas = document.createElement('canvas');
     canvas.style.cssText = 'position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
