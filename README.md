@@ -2,6 +2,8 @@
 
 Blog con estética retro de terminal CRT en tonos ámbar, construido con **Astro.js**. El estilo se aplica con CSS classless sobre etiquetas HTML semánticas. Incluye efectos visuales tipo CRT: scanlines, flicker y ruido.
 
+![Screenshot del sitio](Screenshot%202026-02-10%20202513.png)
+
 ## Estructura
 
 ```
