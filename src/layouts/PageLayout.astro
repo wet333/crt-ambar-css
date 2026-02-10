@@ -15,7 +15,7 @@ const { title, heading } = Astro.props;
 <BaseLayout title={title}>
     <Header heading={heading} />
     <Nav />
-    <main>
+    <main class="flex flex-wrap gap-5">
         <slot />
     </main>
     <Footer />

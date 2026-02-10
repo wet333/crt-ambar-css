@@ -1,4 +1,6 @@
 ---
+import Link from './Link.astro';
+
 interface Props {
     title: string;
     date: Date;
@@ -12,9 +14,11 @@ const { title, date, category, description, slug, isLatest = false } = Astro.pro
 const formattedDate = date.toISOString().split('T')[0];
 ---
 
-<article class:list={[{ 'post-latest': isLatest }]}>
-    <h2>{isLatest ? '' : '> '}{title}</h2>
-    <span class="meta">FECHA: {formattedDate} | CATEGORÍA: {category}</span>
+<article class:list={[
+    "border-terminal p-4 mb-4"
+]}>
+    <h2 class="m-0 pb-3">{title}</h2>
+    <span class="opacity-60 text-sm mb-4 mt-[3px] block">Fecha: {formattedDate} | Categoria: {category}</span>
     <p>{description}</p>
-    <a href={`/blog/${slug}`}>&gt; LEER ARCHIVO COMPLETO</a>
+    <Link href={`/blog/${slug}`}>LEER ARCHIVO COMPLETO</Link>
 </article>

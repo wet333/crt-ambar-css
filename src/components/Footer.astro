@@ -1,4 +1,6 @@
 ---
+import Link from './Link.astro';
+
 interface Props {
     backLink?: string;
     backText?: string;
@@ -7,10 +9,10 @@ interface Props {
 const { backLink, backText } = Astro.props;
 ---
 
-<footer>
+<footer class="text-center mt-12 pt-4 text-sm" style="border-top: 4px double var(--color-amber-dim);">
     {backLink && backText ? (
-        <p><a href={backLink}>{backText}</a></p>
+        <p><Link href={backLink}>{backText}</Link></p>
     ) : (
-        <p>Made by <a href="https://github.com/wet333">_wet333</a></p>
+        <p>Made by <Link href="https://github.com/wet333">_wet333</Link></p>
     )}
 </footer>

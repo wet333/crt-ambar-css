@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/wet333/crt-ambar-css#readme",
   "dependencies": {
-    "@astrojs/markdown-remark": "^6.3.10",
-    "astro": "^5.17.1"
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "tailwindcss": "^4.1.18"
   }
 }

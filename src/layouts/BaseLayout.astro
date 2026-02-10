@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
     title: string;
 }
@@ -7,179 +9,14 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="bg-bg-black min-h-screen">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
 </head>
-<body>
+<body class="max-w-[960px] mx-auto p-5 text-amber-bright min-h-screen border-x-amber-dim border-x-4 border-double relative z-10 md:p-5 max-md:p-2.5 max-md:border-none">
     <slot />
     <script src="../scripts/crt-effects.ts"></script>
 </body>
 </html>
-
-<style is:global>
-    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-    :root {
-        --amber-bright: #ffb000;
-        --amber-dim: #cc8c00;
-        --bg-black: #110d00;
-        --crt-glow: 0 0 10px var(--amber-bright), 0 0 2px var(--amber-bright);
-        --border-style: 2px solid var(--amber-dim);
-    }
-
-    * { box-sizing: border-box; }
-
-    html {
-        background-color: #000;
-        min-height: 100vh;
-    }
-
-    body {
-        max-width: 960px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: var(--bg-black);
-        color: var(--amber-bright);
-        font-family: 'VT323', monospace;
-        text-transform: uppercase;
-        text-shadow: var(--crt-glow);
-        min-height: 100vh;
-        border-left: 4px double var(--amber-dim);
-        border-right: 4px double var(--amber-dim);
-        position: relative;
-        z-index: 10;
-    }
-
-    h1, h2, h3, h4, h5, h6 {
-        font-weight: normal;
-        margin-top: 1.5rem;
-        margin-bottom: 0.5rem;
-        border-bottom: 1px dashed var(--amber-dim);
-    }
-
-    h1 { font-size: 3rem; text-align: center; border-bottom: 4px double var(--amber-dim); padding-bottom: 10px; }
-    p { line-height: 1.5; font-size: 1.2rem; margin-bottom: 1rem; }
-    a { color: var(--amber-bright); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.2s; cursor: pointer; }
-    a:hover { background-color: rgba(255, 176, 0, 0.2); border-bottom-color: var(--amber-bright); }
-
-    header { margin-bottom: 2rem; }
-
-    main {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    main > article { flex: 3 1 600px; border: var(--border-style); padding: 20px; }
-    main > aside { flex: 1 1 250px; }
-
-    aside section {
-        border: var(--border-style);
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-    aside h3 { margin-top: 0; background: var(--amber-dim); color: #000; padding: 5px; text-shadow: none; font-weight: bold; }
-
-    nav {
-        border: var(--border-style);
-        margin-bottom: 2rem;
-        padding: 0.5rem;
-    }
-
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    nav li { margin: 0; }
-    nav a { display: block; padding: 0.5rem 1rem; }
-
-    #menu-toggle {
-        display: none;
-        width: 100%;
-        background: transparent;
-        border: none;
-        color: var(--amber-bright);
-        font-family: inherit;
-        font-size: 1.5rem;
-        cursor: pointer;
-        text-align: left;
-        text-transform: uppercase;
-    }
-
-    button, input, textarea {
-        background: transparent;
-        border: var(--border-style);
-        color: var(--amber-bright);
-        font-family: inherit;
-        font-size: 1rem;
-        padding: 10px;
-        width: 100%;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        text-shadow: inherit;
-    }
-    button:hover { background: var(--amber-bright); color: #000; text-shadow: none; cursor: pointer; }
-
-    footer {
-        text-align: center;
-        margin-top: 3rem;
-        padding-top: 1rem;
-        border-top: 4px double var(--amber-dim);
-        font-size: 0.9rem;
-    }
-
-    .meta { opacity: 0.7; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
-
-    article.post-latest { border-width: 3px; box-shadow: 0 0 15px rgba(255, 176, 0, 0.15); }
-
-    pre {
-        border: 1px dashed #cc8c00;
-        padding: 15px;
-        overflow-x: auto;
-    }
-
-    blockquote {
-        border-left: 3px solid var(--amber-dim);
-        padding-left: 15px;
-        margin-left: 0;
-        opacity: 0.85;
-    }
-
-    @media (max-width: 768px) {
-        body { padding: 10px; border: none; }
-        h1 { font-size: 2rem; }
-
-        #menu-toggle { display: block; }
-        nav ul {
-            display: none;
-            flex-direction: column;
-            border-top: 1px dashed var(--amber-dim);
-            margin-top: 10px;
-        }
-        nav ul.open { display: flex; }
-        nav a { text-align: center; padding: 15px; border-bottom: 1px dashed var(--amber-dim); }
-    }
-
-    .crt-overlay {
-        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-        background: repeating-linear-gradient(to bottom, transparent 0px, transparent 2px, rgba(0,0,0,0.2) 3px);
-        pointer-events: none; z-index: 9999;
-    }
-    .crt-scan-anim {
-        position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-        background: rgba(255, 176, 0, 0.03); opacity: 0; pointer-events: none; z-index: 9998;
-        animation: flicker 0.15s infinite;
-    }
-    .crt-noise-canvas {
-        position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-        z-index: -1; opacity: 0.4; pointer-events: none;
-    }
-    @keyframes flicker { 0% { opacity: 0.8; } 50% { opacity: 0.9; } 100% { opacity: 0.8; } }
-</style>

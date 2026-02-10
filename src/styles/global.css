@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'DepartureMono';
+    src: url('/fonts/DepartureMono-1.500/DepartureMono-Regular.woff2') format('woff2'),
+         url('/fonts/DepartureMono-1.500/DepartureMono-Regular.woff') format('woff'),
+         url('/fonts/DepartureMono-1.500/DepartureMono-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@theme {
+    --color-amber-bright: #ffb000;
+    --color-amber-dim: #cc8c00;
+    --color-bg-black: #110d00;
+    --color-bg-dark: #000;
+    --font-family-terminal: 'DepartureMono', monospace;
+}
+
+@utility border-terminal {
+    border: 1px solid var(--color-amber-dim);
+}
+
+@utility negative-color {
+    color: var(--color-bg-black);
+    background-color: var(--color-amber-bright);
+    text-shadow: none;
+}
+
+@utility border-terminal-double {
+    border-style: double;
+    border-width: 4px;
+    border-color: var(--color-amber-dim);
+}
+
+@layer base {
+    * { box-sizing: border-box; }
+
+    body {
+        font-family: var(--font-family-terminal);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-normal mt-6 mb-2 border-b border-dashed border-amber-dim;
+    }
+
+    h1 {
+        @apply text-5xl text-center pb-2.5;
+        border-bottom: 4px double var(--color-amber-dim);
+    }
+
+    h2 { @apply text-2xl; }
+    h3 { @apply text-xl; }
+
+    p {
+        @apply leading-relaxed text-lg mb-4;
+    }
+
+    a {
+        @apply text-amber-bright no-underline border-b border-transparent transition-all duration-200 cursor-pointer;
+    }
+    a:hover {
+        @apply border-b-amber-bright;
+    }
+
+    pre {
+        @apply border border-dashed border-amber-dim p-4 overflow-x-auto;
+    }
+
+    blockquote {
+        @apply border-l-3 border-amber-dim pl-4 ml-0 opacity-85;
+    }
+
+    button, input, textarea {
+        @apply bg-transparent border-terminal text-amber-bright text-base p-2.5 w-full mb-4;
+        font-family: var(--font-family-terminal);
+        text-shadow: inherit;
+    }
+    button:hover {
+        @apply text-black cursor-pointer;
+        text-shadow: none;
+    }
+}
+
+#menu-toggle {
+    @apply hidden w-full bg-transparent border-none text-amber-bright text-2xl cursor-pointer text-left;
+    font-family: var(--font-family-terminal);
+}
+
+@media (max-width: 768px) {
+    #menu-toggle { @apply block; }
+    nav ul {
+        @apply hidden flex-col border-t border-dashed border-amber-dim mt-2.5;
+    }
+    nav ul.open { @apply flex; }
+    nav a {
+        @apply text-center p-4 border-b border-dashed border-amber-dim;
+    }
+}

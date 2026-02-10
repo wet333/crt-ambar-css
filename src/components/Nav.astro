@@ -1,10 +1,12 @@
 ---
+import Link from './Link.astro';
+
 const currentPath = Astro.url.pathname;
 ---
 
-<nav>
-    <ul>
-        <li><a href="/" class:list={[{ active: currentPath === '/' }]}>[ INICIO ]</a></li>
-        <li><a href="/about" class:list={[{ active: currentPath === '/about/' || currentPath === '/about' }]}>[ PERFIL ]</a></li>
+<nav class="border-terminal mb-8 p-2">
+    <ul class="flex justify-around list-none p-0 m-0">
+        <li class="m-0"><Link href="/" class:list={["block py-2 px-4", { active: currentPath === '/' }]}>[ INICIO ]</Link></li>
+        <li class="m-0"><Link href="/about" class:list={["block py-2 px-4", { active: currentPath === '/about/' || currentPath === '/about' }]}>[ PERFIL ]</Link></li>
     </ul>
 </nav>

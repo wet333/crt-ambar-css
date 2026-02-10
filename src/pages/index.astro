@@ -4,6 +4,7 @@ import Nav from '../components/Nav.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import PostCard from '../components/PostCard.astro';
+import Link from '../components/Link.astro';
 import { getCollection } from 'astro:content';
 
 const posts = (await getCollection('blog')).sort(
@@ -16,8 +17,8 @@ const posts = (await getCollection('blog')).sort(
 
     <Nav />
 
-    <main>
-        <section style="flex: 3">
+    <main class="flex flex-wrap gap-5">
+        <section class="grow-3 shrink basis-0">
             {posts.map((post, i) => (
                 <PostCard
                     title={post.data.title}
@@ -30,22 +31,22 @@ const posts = (await getCollection('blog')).sort(
             ))}
         </section>
 
-        <aside>
-            <section>
-                <h3>&gt; ESTADO DEL SERVIDOR</h3>
+        <aside class="grow shrink basis-[250px]">
+            <section class="border-terminal p-4 mb-5">
+                <h3 class="mt-0 p-1 font-bold negative-color">ESTADO DEL SERVIDOR</h3>
                 <p>UPTIME: 4503 DÍAS</p>
                 <p>TEMP: 34°C</p>
                 <p>CORES: ACTIVE</p>
             </section>
 
-            <section>
-                <h3>&gt; BLOG</h3>
-                <ul>
+            <section class="border-terminal p-4 mb-5">
+                <h3 class="mt-0 p-1 font-bold negative-color">BLOG</h3>
+                <ul class="list-none p-0">
                     {posts.map((post, i) => (
                         <li>
-                            <a href={`/blog/${post.id}`}>
+                            <Link href={`/blog/${post.id}`}>
                                 {post.data.title}{i === 0 ? ' (ÚLTIMO)' : ''}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                 </ul>
