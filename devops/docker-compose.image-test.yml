@@ -1,0 +1,6 @@
+services:
+    crt-ambar-css:
+        image: wet333/crt-blog:latest
+        ports:
+            - "${PORT:-8080}:80"
+        restart: unless-stopped

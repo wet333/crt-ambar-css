@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.git/
+.gitignore
+.cursor/
+devops/*
+!devops/nginx.conf
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.md
+!README.md

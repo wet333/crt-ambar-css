@@ -1,0 +1,8 @@
+services:
+    crt-ambar-css:
+        build:
+            context: ..
+            dockerfile: devops/Dockerfile
+        ports:
+            - "${PORT:-8080}:80"
+        restart: unless-stopped

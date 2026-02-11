@@ -17,7 +17,7 @@ const formattedDate = date.toISOString().split('T')[0];
 <article class:list={[
     "border-terminal p-4 mb-4"
 ]}>
-    <h2 class="m-0 pb-3">{title}</h2>
+    <h2 class="m-0 pb-3 border-b border-dotted border-amber-bright">{title}</h2>
     <span class="opacity-60 text-sm mb-4 mt-[3px] block">Fecha: {formattedDate} | Categoría: {category}</span>
     <p>{description}</p>
     <Link href={`/blog/${slug}`} command={`cat ~/blog/${slug}`}>LEER MÁS</Link>

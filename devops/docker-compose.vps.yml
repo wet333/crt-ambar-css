@@ -1,0 +1,16 @@
+services:
+    crt-ambar-css:
+        image: wet333/crt-blog:latest
+        restart: unless-stopped
+        networks:
+            - traefik-net
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.crt-blog.rule=Host(`wetagustin.com`)"
+            - "traefik.http.routers.crt-blog.entrypoints=websecure"
+            - "traefik.http.routers.crt-blog.tls.certresolver=le-resolver"
+            - "traefik.http.services.crt-blog.loadbalancer.server.port=80"
+
+networks:
+    traefik-net:
+        external: true
